@@ -1,1 +1,5 @@
-﻿
+﻿.table-responsive {
+     overflow-x: initial;
+
+    -webkit-overflow-scrolling: touch;
+}
