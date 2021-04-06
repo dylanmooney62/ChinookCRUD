@@ -458,4 +458,8 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\tabler\plugins\prismjs\plugin.js" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Context\Context.csproj" />
+    </ItemGroup>
+
 </Project>

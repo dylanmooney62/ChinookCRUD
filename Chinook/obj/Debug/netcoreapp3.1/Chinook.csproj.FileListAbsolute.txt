@@ -351,3 +351,7 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Chinook.pdb
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Chinook.genruntimeconfig.cache
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Albums/Index.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Context.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Entities.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Context.pdb
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Entities.pdb

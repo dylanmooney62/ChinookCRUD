@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,7 +28,10 @@ namespace Chinook
         {
             services.AddLiveReload();
             
+            
             services.AddRazorPages().AddRazorRuntimeCompilation();
+
+            services.AddSingleton<IAlbumData, InMemoryAlbumData>();
             
             services.AddRouting(options => options.LowercaseUrls = true);
         }

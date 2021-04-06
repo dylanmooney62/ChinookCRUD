@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Chinook/1.0.0": {
         "dependencies": {
+          "Context": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.0",
           "Westwind.AspNetCore.LiveReload": "0.3.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -531,6 +532,25 @@
         },
         "compile": {
           "lib/netcoreapp3.1/Westwind.AspNetCore.LiveReload.dll": {}
+        }
+      },
+      "Context/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "runtime": {
+          "Context.dll": {}
+        },
+        "compile": {
+          "Context.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "runtime": {
+          "Entities.dll": {}
+        },
+        "compile": {
+          "Entities.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2351,6 +2371,16 @@
       "sha512": "sha512-eq5g/ABkNw2R/Exrvxg/BPHgMmQ/9Ou9ysCsOhEuhxntl19XM+v+93TfZ7u9x4BBNA2ZI6rUy2tCvKTFMiD8Sg==",
       "path": "westwind.aspnetcore.livereload/0.3.1",
       "hashPath": "westwind.aspnetcore.livereload.0.3.1.nupkg.sha512"
+    },
+    "Context/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",
