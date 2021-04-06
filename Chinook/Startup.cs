@@ -33,7 +33,14 @@ namespace Chinook
 
             services.AddSingleton<IAlbumData, InMemoryAlbumData>();
             
-            services.AddRouting(options => options.LowercaseUrls = true);
+            services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+                options.LowercaseQueryStrings = true;
+            });
+            
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

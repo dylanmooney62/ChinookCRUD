@@ -19,7 +19,7 @@ namespace Chinook.Pages
 
         public IActionResult OnGet()
         {
-            return Redirect("./albums/");
+            return Redirect("./albums");
         }
     }
 }

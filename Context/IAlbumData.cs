@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ namespace Context
 {
     public interface IAlbumData
     {
-        IEnumerable<Album> GetAll();
+        IEnumerable<Album> GetAlbums(string search);
     }
 
     public class InMemoryAlbumData : IAlbumData
@@ -23,10 +24,13 @@ namespace Context
                 new Album {AlbumId = 3, Title = "American Idiot", ArtistId = 5}
             };
         }
-        
-        public IEnumerable<Album> GetAll()
+
+        public IEnumerable<Album> GetAlbums(string search = null)
         {
-            return from a in _albums orderby a.AlbumId select a;
+            return from a in _albums
+                where string.IsNullOrEmpty(search) || a.Title.StartsWith(search, StringComparison.CurrentCultureIgnoreCase)
+                orderby a.AlbumId
+                select a;
         }
     }
 }
