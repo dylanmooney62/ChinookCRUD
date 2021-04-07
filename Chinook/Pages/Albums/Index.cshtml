@@ -70,7 +70,7 @@
                                     <span class="text-muted">@album.AlbumId</span>
                                 </td>
                                 <td>
-                                    <a href="#" class="text-reset" tabindex="-1">@album.Title</a>
+                                    <a asp-page="./Detail" asp-route-albumId="@album.AlbumId" class="text-reset" tabindex="-1">@album.Title</a>
                                 </td>
                                 <td>
                                     @album.ArtistId

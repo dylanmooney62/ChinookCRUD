@@ -9,6 +9,7 @@ namespace Context
     public interface IAlbumData
     {
         IEnumerable<Album> GetAlbums(string search);
+        Album GetAlbumById(int id);
     }
 
     public class InMemoryAlbumData : IAlbumData
@@ -31,6 +32,11 @@ namespace Context
                 where string.IsNullOrEmpty(search) || a.Title.StartsWith(search, StringComparison.CurrentCultureIgnoreCase)
                 orderby a.AlbumId
                 select a;
+        }
+
+        public Album GetAlbumById(int id)
+        {
+            return _albums.SingleOrDefault(a => a.AlbumId == id);
         }
     }
 }

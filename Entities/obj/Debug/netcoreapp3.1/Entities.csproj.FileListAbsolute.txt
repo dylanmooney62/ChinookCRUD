@@ -1,0 +1,9 @@
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/bin/Debug/netcoreapp3.1/Entities.deps.json
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/bin/Debug/netcoreapp3.1/Entities.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/bin/Debug/netcoreapp3.1/Entities.pdb
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/obj/Debug/netcoreapp3.1/Entities.csprojAssemblyReference.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/obj/Debug/netcoreapp3.1/Entities.AssemblyInfoInputs.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/obj/Debug/netcoreapp3.1/Entities.AssemblyInfo.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/obj/Debug/netcoreapp3.1/Entities.csproj.CoreCompileInputs.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/obj/Debug/netcoreapp3.1/Entities.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Entities/obj/Debug/netcoreapp3.1/Entities.pdb

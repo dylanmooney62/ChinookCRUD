@@ -1,0 +1,12 @@
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/bin/Debug/netcoreapp3.1/Context.deps.json
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/bin/Debug/netcoreapp3.1/Context.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/bin/Debug/netcoreapp3.1/Context.pdb
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/bin/Debug/netcoreapp3.1/Entities.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/bin/Debug/netcoreapp3.1/Entities.pdb
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.csprojAssemblyReference.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.AssemblyInfoInputs.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.AssemblyInfo.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.csproj.CoreCompileInputs.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.csproj.CopyComplete
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.pdb
