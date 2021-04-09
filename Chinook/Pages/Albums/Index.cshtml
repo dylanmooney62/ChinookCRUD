@@ -15,11 +15,11 @@
             </div>
             <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
-                    <a href="#" class="btn btn-primary d-none d-sm-inline-block">
+                    <a asp-page="./New" class="btn btn-primary d-none d-sm-inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                         </svg>
-                        Create Album
+                        New Album
                     </a>
                 </div>
             </div>
@@ -28,11 +28,11 @@
 </div>
 
 
-<div class="page-body">
-    <div class="container-xl">
+<div class="container-xl">
+    <div class="page-body">
         <div class="col-12">
             <div class="mb-3">
-                    <label asp-for="Search" class="form-label">Search</label>
+                <label asp-for="Search" class="form-label">Search</label>
                 <form method="get">
                     <div class="input-group input-group-flat">
                         <input asp-for="Search" type="search" class="form-control" autocomplete="off">
@@ -49,7 +49,7 @@
                 </form>
             </div>
         </div>
-        
+
         <div class="col-12">
             <div class="card">
                 <div class="table-responsive-md">
@@ -79,7 +79,7 @@
                                     <span class="dropdown">
                                         <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown" aria-expanded="false">Actions</button>
                                         <div class="dropdown-menu dropdown-menu-end" style="">
-                                            <a class="dropdown-item" href="#">
+                                            <a class="dropdown-item" asp-page="./Edit" asp-route-albumId="@album.AlbumId">
                                                 Edit
                                             </a>
                                             <a class="dropdown-item" href="#">
@@ -93,43 +93,6 @@
                         </tbody>
                     </table>
                 </div>
-                @* <div class="card-footer d-flex align-items-center"> *@
-                @*     <p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p> *@
-                @*     <ul class="pagination m-0 ms-auto"> *@
-                @*         <li class="page-item disabled"> *@
-                @*             <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> *@
-                @*                 <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left --> *@
-                @*                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> *@
-                @*                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="15 6 9 12 15 18"></polyline> *@
-                @*                 </svg> *@
-                @*                 prev *@
-                @*             </a> *@
-                @*         </li> *@
-                @*         <li class="page-item"> *@
-                @*             <a class="page-link" href="#">1</a> *@
-                @*         </li> *@
-                @*         <li class="page-item active"> *@
-                @*             <a class="page-link" href="#">2</a> *@
-                @*         </li> *@
-                @*         <li class="page-item"> *@
-                @*             <a class="page-link" href="#">3</a> *@
-                @*         </li> *@
-                @*         <li class="page-item"> *@
-                @*             <a class="page-link" href="#">4</a> *@
-                @*         </li> *@
-                @*         <li class="page-item"> *@
-                @*             <a class="page-link" href="#">5</a> *@
-                @*         </li> *@
-                @*         <li class="page-item"> *@
-                @*             <a class="page-link" href="#"> *@
-                @*                 next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right --> *@
-                @*                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> *@
-                @*                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="9 6 15 12 9 18"></polyline> *@
-                @*                 </svg> *@
-                @*             </a> *@
-                @*         </li> *@
-                @*     </ul> *@
-                @* </div> *@
             </div>
         </div>
     </div>

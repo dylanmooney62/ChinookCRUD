@@ -1,3 +1,4 @@
+using System;
 using Context;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,8 @@ namespace Chinook.Pages.Albums
         private readonly IAlbumData _albumData;
         public Album Album { get; set; }
 
+        [TempData]
+        public string Message { get; set; }
 
         public Detail(IAlbumData albumData)
         {

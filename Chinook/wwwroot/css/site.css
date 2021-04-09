@@ -1,5 +1,33 @@
-﻿.table-responsive {
-     overflow-x: initial;
+﻿
+/* Places footer on bottom of page */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
 
+.footer {
+    margin-top: auto;
+}
+
+
+/* Prevents table overflow with one result */
+.table-responsive {
+    overflow-x: initial;
     -webkit-overflow-scrolling: touch;
+}
+
+/* Adds tabler invalid styles on razor validation classes */
+
+.field-validation-error {
+    display: block;
+}
+
+.input-validation-error {
+    padding-right: calc(1.4285714em + .875rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23d63939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.3571429em + .21875rem) center;
+    background-size: calc(.7142857em + .4375rem) calc(.7142857em + .4375rem);
+    border-color: #d63939;
 }

@@ -1,0 +1,42 @@
+@page
+@model Chinook.Pages.Albums.New
+
+@{
+    ViewData["Title"] = "New Album";
+}
+
+<div class="page-header">
+    <div class="container-xl">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <form method="post">
+                        <div class="card-body">
+                            <h3 class="card-title">New Album</h3>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Album.Title">Title</label>
+                                <input class="form-control" asp-for="Album.Title" asp-validation-for="Album.Title"/>
+                                <span class="invalid-feedback" asp-validation-for="Album.Title"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Album.ArtistId">Artist</label>
+                                <select class="form-select" asp-for="Album.ArtistId">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Card footer -->
+                        <div class="card-footer">
+                            <div class="d-flex">
+                                <a href="javascript:history.go(-1);" class="btn btn-link">Cancel</a>
+                                <button type="submit" class="btn btn-primary ms-auto">Save Album</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Entities
 {
     public class Album
     {
-        public int AlbumId { get; set; }
-        public string Title { get; set; }
-        public int ArtistId { get; set; }
+        [Required] public int AlbumId { get; set; }
+
+        [Required, MaxLength(160)] public string Title { get; set; }
+
+        [Required] public int ArtistId { get; set; }
     }
 }
