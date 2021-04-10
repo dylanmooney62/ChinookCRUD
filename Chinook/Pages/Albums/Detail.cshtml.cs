@@ -1,4 +1,3 @@
-using System;
 using Context;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -11,20 +10,20 @@ namespace Chinook.Pages.Albums
         private readonly IAlbumData _albumData;
         public Album Album { get; set; }
 
-        [TempData]
-        public string Message { get; set; }
+        [TempData] public string Message { get; set; }
 
         public Detail(IAlbumData albumData)
         {
             _albumData = albumData;
         }
-
-
+        
         public IActionResult OnGet(int albumId)
         {
-            Album = _albumData.GetAlbumById(albumId);
+            Album = _albumData.GetById(albumId);
+
+            if (Album == null) return RedirectToPage("/NotFound");
             
-            return Album != null ? Page() : (ActionResult) RedirectToPage("/NotFound");
+            return Page();
         }
     }
 }

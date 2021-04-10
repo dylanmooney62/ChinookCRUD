@@ -10,3 +10,6 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.csproj.CopyComplete
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.dll
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.pdb
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/bin/Debug/netcoreapp3.1/Context.runtimeconfig.json
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/bin/Debug/netcoreapp3.1/Context.runtimeconfig.dev.json
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Context/obj/Debug/netcoreapp3.1/Context.genruntimeconfig.cache

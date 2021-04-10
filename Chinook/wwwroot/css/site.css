@@ -1,5 +1,4 @@
-﻿
-/* Places footer on bottom of page */
+﻿/* Places footer on bottom of page */
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -30,4 +29,67 @@
     background-position: right calc(.3571429em + .21875rem) center;
     background-size: calc(.7142857em + .4375rem) calc(.7142857em + .4375rem);
     border-color: #d63939;
+}
+
+
+/* Overwrites Select2 to resemeble tabler*/
+
+.select2-selection__rendered {
+    display: block;
+    width: 100%;
+    padding: .4375rem 2.25rem .4375rem .75rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.4285714 !important;
+    color: #232e3c;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns= 'http://www.w3.org/2000/svg' viewBox= '0 0 16 16' %3e%3cpath fill= 'none' stroke= '%23dadcde' stroke-linecap= 'round' stroke-linejoin= 'round' stroke-width= '2' d= 'M2 5l6 6 6-6' /%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #dadcde;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select2-selection.select2-selection--single {
+    border: none;
+}
+
+.select2-selection__arrow {
+    display: none;
+}
+
+.select2-container .select2-selection--single {
+    height: unset;
+}
+
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: none;
+    border-radius: 4px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+    outline: none;
+}
+
+.select2-dropdown {
+    border: 1px solid #dadcde;
+    border-radius: 0 0 4px 4px;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--tblr-azure);
+    color: white;
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: var(--tblr-light);
+}
+
+.select2-results__option {
+    padding: .4375rem 2.25rem .4375rem .75rem;
 }

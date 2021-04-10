@@ -1,4 +1,5 @@
 @page "/albums/{albumId:int}"
+@using Entities
 @model Chinook.Pages.Albums.Detail
 @{
     ViewData["Title"] = "Album Title";
@@ -53,9 +54,9 @@
     <div class="page-header page-header-border">
         <div class="row align-items-center">
             <div class="col">
-                <h2 class="page-title">@Model.Album.AlbumId - @Model.Album.Title</h2>
+                <h2 class="page-title">@Model.Album.Title</h2>
                 <div class="text-muted mt-1">
-                    <a href="#" class="text-body">@Model.Album.ArtistId - Artist</a>
+                    <a href="#" class="text-body">@Model.Album.Artist.Name</a>
                 </div>
             </div>
             <div class="col-auto">
@@ -66,12 +67,49 @@
                         </svg>
                         Edit
                     </a>
-                    <a href="#" class="btn btn-white d-none d-md-inline-flex">
+                    <button href="#" class="btn btn-white d-none d-md-inline-flex" data-bs-toggle="modal" data-bs-target="#modal-danger">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="4" y1="7" x2="20" y2="7"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"/><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"/>
                         </svg>
                         Delete
-                    </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* TODO: Extract this into a component *@
+
+
+<div class="modal modal-blur fade show" id="modal-danger" tabindex="-1" role="dialog" aria-modal="true" >
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-status bg-danger"></div>
+            <div class="modal-body text-center py-4">
+                <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 9v2m0 4v.01"></path><path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"></path>
+                </svg>
+                <h3>Delete Album</h3>
+                <div class="text-muted">Do you really want to delete "@Model.Album.Title"? This action cannot be undone.</div>
+            </div>
+            <div class="modal-footer">
+                <div class="w-100">
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn btn-white w-100" data-bs-dismiss="modal">
+                                Cancel
+                            </a>
+                        </div>
+                        <div class="col">
+                            <form  action="/albums/@Model.Album.AlbumId/delete" method="post">
+                                <button class="btn btn-danger w-100" type="submit">Delete Album</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

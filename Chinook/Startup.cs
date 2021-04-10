@@ -7,6 +7,7 @@ using Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,29 +28,28 @@ namespace Chinook
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddLiveReload();
-            
-            
-            services.AddRazorPages().AddRazorRuntimeCompilation();
 
-            services.AddSingleton<IAlbumData, InMemoryAlbumData>();
+
+            services.AddRazorPages().AddRazorRuntimeCompilation();
             
+            services.AddDbContextPool<ChinookContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("ChinookDB")));
+
+            services.AddScoped<IAlbumData, SqlAlbumData>();
+
             services.AddRouting(options =>
             {
                 options.LowercaseUrls = true;
                 options.LowercaseQueryStrings = true;
             });
-            
-
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            
             app.UseLiveReload();
 
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

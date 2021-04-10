@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Context;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Chinook.Pages.Albums
 {
@@ -23,7 +27,7 @@ namespace Chinook.Pages.Albums
 
         public void OnGet()
         {
-            Albums = _albumData.GetAlbums(Search);
+            Albums = _albumData.Search(Search);
         }
     }
 }

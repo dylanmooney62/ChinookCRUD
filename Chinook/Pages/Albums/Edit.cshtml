@@ -11,7 +11,7 @@
                 <div class="card">
                     <form method="post">
                         <div class="card-body">
-                            <h3 class="card-title">@Model.Album.Title - @Model.Album.AlbumId</h3>
+                            <h3 class="card-title">@Model.Album.Title</h3>
                             <div class="mb-3">
                                 <label class="form-label" asp-for="Album.Title">Title</label>
                                 <input class="form-control" asp-for="Album.Title" asp-validation-for="Album.Title"/>
@@ -19,10 +19,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" asp-for="Album.ArtistId">Artist</label>
-                                <select class="form-select" asp-for="Album.ArtistId">
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select class="form-select js-select" asp-for="Album.ArtistId" asp-items="@(new SelectList(Model.Artists, "ArtistId", "Name"))">
+                                    <option>Please select one</option>
                                 </select>
                             </div>
                             <input type="hidden" asp-for="Album.AlbumId"/>
