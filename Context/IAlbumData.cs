@@ -5,11 +5,11 @@ namespace Context
 {
     public interface IAlbumData
     {
-        IEnumerable<Album> Search(string name);
-        Album GetById(int id);
-        Album Update(Album updatedRestaurant);
-        Album Add(Album newRestaurant);
-        Album Delete(int id);
+        IEnumerable<Albums> Search(string name);
+        Albums GetById(int id);
+        Albums Update(Albums updatedRestaurant);
+        Albums Add(Albums newRestaurant);
+        Albums Delete(int id);
         int Count();
         int Commit();
     }

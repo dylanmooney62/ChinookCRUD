@@ -34,7 +34,7 @@ namespace Chinook
             
             services.AddDbContextPool<ChinookContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("ChinookDB")));
-
+            
             services.AddScoped<IAlbumData, SqlAlbumData>();
 
             services.AddRouting(options =>
