@@ -8,7 +8,7 @@ namespace Chinook.Pages.Albums
     public class Detail : PageModel
     {
         private readonly IAlbumData _albumData;
-        public Entities.Albums Album { get; set; }
+        public Entities.Album Album { get; set; }
 
         [TempData] public string Message { get; set; }
 

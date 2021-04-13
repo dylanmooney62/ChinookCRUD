@@ -15,7 +15,7 @@ namespace Context
             _db = db;
         }
 
-        public Albums Add(Albums newAlbum)
+        public Album Add(Album newAlbum)
         {
             _db.Add(newAlbum);
 
@@ -27,9 +27,9 @@ namespace Context
             return _db.SaveChanges();
         }
 
-        public Albums Delete(int id)
+        public Album Delete(int id)
         {
-            Albums album = GetById(id);
+            Album album = GetById(id);
 
             if (album != null)
             {
@@ -39,7 +39,7 @@ namespace Context
             return album;
         }
 
-        public Albums GetById(int id)
+        public Album GetById(int id)
         {
             return _db.Albums
                 .Include(a => a.Artist)
@@ -51,9 +51,9 @@ namespace Context
             return _db.Albums.Count();
         }
 
-        public IEnumerable<Albums> Search(string search)
+        public IEnumerable<Album> Search(string search)
         {
-            IEnumerable<Albums> albums = _db.Albums
+            IEnumerable<Album> albums = _db.Albums
                 .Include(a => a.Artist).OrderBy(a => a.Title);
 
             if (search == null) return albums.ToList();
@@ -64,9 +64,9 @@ namespace Context
         }
 
 
-        public Albums Update(Albums updatedRestaurant)
+        public Album Update(Album updatedRestaurant)
         {
-            EntityEntry<Albums> entity = _db.Albums.Attach(updatedRestaurant);
+            EntityEntry<Album> entity = _db.Albums.Attach(updatedRestaurant);
 
             entity.State = EntityState.Modified;
 

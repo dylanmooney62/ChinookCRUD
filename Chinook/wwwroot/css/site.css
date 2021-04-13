@@ -16,6 +16,18 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.table-responsive-md td {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Buttons need to be able to overflow*/
+.table-responsive-md td:last-child {
+    overflow: unset;
+}
+
 /* Adds tabler invalid styles on razor validation classes */
 
 .field-validation-error {
