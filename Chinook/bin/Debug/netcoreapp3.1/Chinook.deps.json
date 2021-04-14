@@ -32,6 +32,7 @@
       "Chinook/1.0.0": {
         "dependencies": {
           "Context": "1.0.0",
+          "Lib": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.0",
           "Westwind.AspNetCore.LiveReload": "0.3.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -856,6 +857,14 @@
         },
         "compile": {
           "Entities.dll": {}
+        }
+      },
+      "Lib/1.0.0": {
+        "runtime": {
+          "Lib.dll": {}
+        },
+        "compile": {
+          "Lib.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2872,6 +2881,11 @@
       "sha512": ""
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

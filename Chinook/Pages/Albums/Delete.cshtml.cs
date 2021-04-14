@@ -20,9 +20,9 @@ namespace Chinook.Pages.Albums
             // return RedirectToPage("./Detail", new {albumId});
         }
 
-        public IActionResult OnPost(int albumId)
+        public IActionResult OnPost(int id)
         {
-            Entities.Album album = _albumData.GetById(albumId);
+            Entities.Album album = _albumData.GetById(id);
 
             if (album == null) return RedirectToPage("/NotFound");
 

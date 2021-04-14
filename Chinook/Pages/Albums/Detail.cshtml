@@ -1,5 +1,4 @@
-@page "/albums/{albumId:int}"
-@using Entities
+@page "/albums/{id:int}"
 @model Chinook.Pages.Albums.Detail
 @{
     ViewData["Title"] = "Album Title";
@@ -32,24 +31,7 @@
 
 <div class="container-xl">
 
-    @if (Model.Message != null)
-    {
-        <div class="alert alert-success alert-dismissible mt-2" role="alert">
-            <div class="d-flex">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check alert-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l5 5l10 -10"></path>
-                    </svg>
-                </div>
-                <div>
-                    <div>@Model.Message</div>
-                </div>
-            </div>
-            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
-        </div>
-    }
-
+    <partial name="Shared/_Alert" model="@Model.Message"/>
 
     <div class="page-header page-header-border">
         <div class="row align-items-center">
@@ -61,7 +43,7 @@
             </div>
             <div class="col-auto">
                 <div class="btn-list">
-                    <a asp-page="./Edit" asp-route-albumId="@Model.Album.AlbumId" class="btn btn-white">
+                    <a asp-page="./Edit" asp-route-id="@Model.Album.AlbumId" class="btn btn-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3"/><path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3"/><line x1="16" y1="5" x2="19" y2="8"/>
                         </svg>
@@ -77,41 +59,7 @@
             </div>
         </div>
     </div>
-</div>
 
+    <vc:delete-modal title="@Model.Album.Title" entity="Album" id="@Model.Album.AlbumId" />
 
-@* TODO: Extract this into a component *@
-
-
-<div class="modal modal-blur fade show" id="modal-danger" tabindex="-1" role="dialog" aria-modal="true" >
-    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            <div class="modal-status bg-danger"></div>
-            <div class="modal-body text-center py-4">
-                <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 9v2m0 4v.01"></path><path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"></path>
-                </svg>
-                <h3>Delete Album</h3>
-                <div class="text-muted">Do you really want to delete "@Model.Album.Title"? This action cannot be undone.</div>
-            </div>
-            <div class="modal-footer">
-                <div class="w-100">
-                    <div class="row">
-                        <div class="col">
-                            <a href="#" class="btn btn-white w-100" data-bs-dismiss="modal">
-                                Cancel
-                            </a>
-                        </div>
-                        <div class="col">
-                            <form asp-page="./Delete" asp-route-albumId="@Model.Album.AlbumId" method="post">
-                                <button class="btn btn-danger w-100" type="submit">Delete Album</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>

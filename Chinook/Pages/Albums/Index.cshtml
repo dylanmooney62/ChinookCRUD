@@ -7,23 +7,7 @@
 
 <div class="container-xl">
 
-    @if (Model.Message != null)
-    {
-        <div class="alert alert-success alert-dismissible mt-2" role="alert">
-            <div class="d-flex">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check alert-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l5 5l10 -10"></path>
-                    </svg>
-                </div>
-                <div>
-                    <div>@Model.Message</div>
-                </div>
-            </div>
-            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
-        </div>
-    }
+    <partial name="Shared/_Alert" model="@Model.Message"/>
 
     <div class="page-header d-print-none">
         <div class="row align-items-center">
@@ -44,12 +28,11 @@
             </div>
         </div>
     </div>
+
 </div>
 
 
 <div class="container-xl">
-
-
     <div class="page-body">
         <div class="col-12">
             <div class="mb-3">
@@ -91,7 +74,7 @@
                                     <span class="text-muted">@album.AlbumId</span>
                                 </td>
                                 <td>
-                                    <a asp-page="./Detail" asp-route-albumId="@album.AlbumId" class="text-reset" tabindex="-1">@album.Title</a>
+                                    <a asp-page="./Detail" asp-route-id="@album.AlbumId" class="text-reset" tabindex="-1">@album.Title</a>
                                 </td>
                                 <td>
                                     @album.Artist.Name
@@ -100,7 +83,7 @@
                                     <span class="dropdown">
                                         <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown" aria-expanded="false">Actions</button>
                                         <div class="dropdown-menu dropdown-menu-end" style="">
-                                            <a class="dropdown-item" asp-page="./Edit" asp-route-albumId="@album.AlbumId">
+                                            <a class="dropdown-item" asp-page="./Edit" asp-route-id="@album.AlbumId">
                                                 Edit
                                             </a>
                                             <a class="dropdown-item" href="#">

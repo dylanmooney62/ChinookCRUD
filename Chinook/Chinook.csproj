@@ -460,6 +460,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Context\Context.csproj" />
+      <ProjectReference Include="..\Lib\Lib.csproj" />
     </ItemGroup>
 
 </Project>
