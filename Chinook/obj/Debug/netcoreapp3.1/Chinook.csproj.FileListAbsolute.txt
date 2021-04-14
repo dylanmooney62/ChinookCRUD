@@ -390,3 +390,9 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Lib.pdb
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_TrackTable.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_BackBar.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/X.PagedList.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/X.PagedList.Mvc.Core.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/X.PagedList.Web.Common.dll

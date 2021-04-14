@@ -1,7 +1,15 @@
-﻿$(document).ready(function() {
+﻿$(document).ready(function () {
     $('.js-select').select2();
 });
 
-// $('#myModal').on('shown.bs.modal', function () {
-//     $('#myInput').trigger('focus')
-// })
+
+// Add tabler styles to X paged list
+
+document.querySelectorAll(".page-item").forEach(function (el) { 
+    el.firstElementChild.classList.add("page-link");
+    
+    if(el.classList.contains("active")) {
+        el.firstElementChild.classList.add("active");
+    }
+})
+                    

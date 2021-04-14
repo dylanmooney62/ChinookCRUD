@@ -7,6 +7,7 @@ using Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +35,8 @@ namespace Chinook
             
             services.AddDbContextPool<ChinookContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("ChinookDB")));
+            
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             
             services.AddScoped<IAlbumData, SqlAlbumData>();
 

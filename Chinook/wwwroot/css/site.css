@@ -132,3 +132,11 @@ span.select2-selection:focus {
 .undraw-svg img {
     height: unset;
 }
+
+
+/*Overwrite Pager classes*/
+
+.pagination .page-item:nth-child(2).active,
+.pagination .page-item:last-child.active {
+    margin-left: 12px !important;
+}

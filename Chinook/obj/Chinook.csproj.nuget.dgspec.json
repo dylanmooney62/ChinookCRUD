@@ -52,6 +52,14 @@
             "Westwind.AspNetCore.LiveReload": {
               "target": "Package",
               "version": "[0.3.1, )"
+            },
+            "X.PagedList": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [

@@ -1,13 +1,9 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Context;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
+using X.PagedList;
 
 namespace Chinook.Pages.Albums
 {
@@ -23,9 +19,14 @@ namespace Chinook.Pages.Albums
             _albumData = albumData;
         }
 
-        public void OnGet()
+        public void OnGet(int? p)
         {
             Albums = _albumData.Search(Search);
+
+            int page = p ?? 1;
+
+            Albums = Albums.ToPagedList(page, 12);
         }
     }
 }
+
