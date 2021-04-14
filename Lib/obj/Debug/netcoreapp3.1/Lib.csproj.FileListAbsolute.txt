@@ -1,0 +1,9 @@
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/bin/Debug/netcoreapp3.1/Lib.deps.json
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/bin/Debug/netcoreapp3.1/Lib.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/bin/Debug/netcoreapp3.1/Lib.pdb
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/obj/Debug/netcoreapp3.1/Lib.csprojAssemblyReference.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/obj/Debug/netcoreapp3.1/Lib.AssemblyInfoInputs.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/obj/Debug/netcoreapp3.1/Lib.AssemblyInfo.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/obj/Debug/netcoreapp3.1/Lib.csproj.CoreCompileInputs.cache
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/obj/Debug/netcoreapp3.1/Lib.dll
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/obj/Debug/netcoreapp3.1/Lib.pdb
