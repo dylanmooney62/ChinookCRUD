@@ -59,7 +59,10 @@
             </div>
         </div>
     </div>
-
-    <vc:delete-modal title="@Model.Album.Title" entity="Album" id="@Model.Album.AlbumId" />
+    
+    <partial name="Shared/_TrackTable" model="@Model.Album.Tracks"/>
 
 </div>
+
+
+<vc:delete-modal title="@Model.Album.Title" entity="Album" id="@Model.Album.AlbumId"/>

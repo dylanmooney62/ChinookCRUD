@@ -43,6 +43,7 @@ namespace Context
         {
             return _db.Albums
                 .Include(a => a.Artist)
+                .Include(a => a.Tracks).ThenInclude(t => t.Genre)
                 .SingleOrDefault(a => a.AlbumId == id);
         }
 
@@ -57,7 +58,7 @@ namespace Context
                 .Include(a => a.Artist).OrderBy(a => a.Title);
 
             if (search == null) return albums.ToList();
-            
+
             return albums.Where(a =>
                 a.Title.ToLower().StartsWith(search.ToLower()) ||
                 a.Artist.Name.ToLower().StartsWith(search.ToLower())).ToList();

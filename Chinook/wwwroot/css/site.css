@@ -126,3 +126,9 @@ span.selection:focus,
 span.select2-selection:focus {
     outline: none;
 }
+
+/*Overwrite tabler empty*/
+
+.undraw-svg img {
+    height: unset;
+}

@@ -36,7 +36,7 @@ namespace Chinook.Pages.Albums
             
             TempData["Message"] = "Album created";
 
-            return RedirectToPage("./Detail", new {albumId = Album.AlbumId});
+            return RedirectToPage("./Detail", new {id = Album.AlbumId});
         }
     }
 }

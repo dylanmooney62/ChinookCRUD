@@ -60,7 +60,6 @@
                     <table class="table card-table table-vcenter text-nowrap datatable">
                         <thead>
                         <tr>
-                            <th class="w-1">ID.</th>
                             <th>Title</th>
                             <th>Artist</th>
                             <th></th>
@@ -70,9 +69,6 @@
                         @foreach (Album album in Model.Albums)
                         {
                             <tr>
-                                <td>
-                                    <span class="text-muted">@album.AlbumId</span>
-                                </td>
                                 <td>
                                     <a asp-page="./Detail" asp-route-id="@album.AlbumId" class="text-reset" tabindex="-1">@album.Title</a>
                                 </td>
