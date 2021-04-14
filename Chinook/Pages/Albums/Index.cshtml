@@ -99,7 +99,7 @@
                     @if (Model.Albums.Count() > 1)
                     {
                         <div class="card-footer d-flex align-items-center">
-                            @Html.PagedListPager((IPagedList) Model.Albums, page => Url.Page("./Index", new {p = page, Search = Model.Search}),
+                            @Html.PagedListPager((IPagedList) Model.Albums, page => Url.Page("./Index", new {p = page, Model.Search}),
                                 new PagedListRenderOptions
                                 {
                                     ContainerDivClasses = new[] {"ms-auto"},
