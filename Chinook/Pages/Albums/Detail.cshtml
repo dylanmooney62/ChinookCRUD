@@ -1,16 +1,16 @@
 @page "/albums/{id:int}"
 @model Chinook.Pages.Albums.Detail
 @{
-    ViewData["Title"] = "Album Title";
+    ViewData["Title"] = "Album";
     ViewData["BackBar"] = "All Albums";
+    ViewData["Entity"] = "Album";
 }
 
 <partial name="Shared/_BackBar"/>
 
+<partial name="Shared/_Alert" model="@Model.Message"/>
+
 <div class="container-xl">
-
-    <partial name="Shared/_Alert" model="@Model.Message"/>
-
     <div class="page-header page-header-border">
         <div class="row align-items-center">
             <div class="col">

@@ -1,0 +1,22 @@
+@page
+@using Entities
+@using Lib
+@using X.PagedList.Mvc.Core.Common
+@using X.PagedList.Web.Common
+@model Chinook.Pages.Tracks.Index
+
+@{
+    ViewData["Title"] = "Tracks";
+    ViewData["Entity"] = "Track";
+}
+
+<partial name="Shared/_Alert" for="Message"/>
+<partial name="Shared/_NewHeader" />
+
+<div class="container-xl">
+    <div class="page-body">
+
+        <partial name="Shared/_SearchBar" for="Search"/>
+
+    </div>
+</div>
