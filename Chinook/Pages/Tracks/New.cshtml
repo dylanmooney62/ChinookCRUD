@@ -12,7 +12,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <form method="post">
+                    <form method="post" asp-route-albumId="@Model.AlbumId">
                         <div class="card-body">
                             <h3 class="card-title">New Track</h3>
                             <div class="mb-3">
@@ -24,7 +24,7 @@
                                 <label class="form-label" asp-for="Track.AlbumId">Album*</label>
                                 <select class="form-select js-select"
                                         asp-for="Track.AlbumId"
-                                        asp-items="@(new SelectList(Model.Albums, "AlbumId", "Title"))"
+                                        asp-items="@(new SelectList(Model.Albums, "AlbumId", "Title", Model.AlbumId))"
                                         asp-validation-for="Track.AlbumId">
                                     <option value="">Please select one</option>
                                 </select>
