@@ -12,7 +12,7 @@ namespace Chinook.Pages.Albums
         private readonly IAlbumData _albumData;
         private readonly ChinookContext _db;
 
-        [BindProperty] public Entities.Album Album { get; set; }
+        [BindProperty] public Album Album { get; set; }
         public IEnumerable<Artist> Artists { get; set; }
 
         public New(IAlbumData albumData, ChinookContext db)
@@ -29,7 +29,7 @@ namespace Chinook.Pages.Albums
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid) return Page();
-
+            
             _albumData.Add(Album);
 
             _albumData.Commit();

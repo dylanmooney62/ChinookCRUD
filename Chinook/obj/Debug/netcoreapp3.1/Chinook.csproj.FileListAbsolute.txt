@@ -398,3 +398,4 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Tracks/Index.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_SearchBar.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_NewHeader.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Tracks/New.cshtml.g.cs

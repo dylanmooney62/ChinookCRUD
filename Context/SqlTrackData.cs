@@ -54,11 +54,11 @@ namespace Context
         public IEnumerable<Track> Search(string search)
         {
             IEnumerable<Track> tracks = _db.Tracks
-                .Include(t => t.Genre).Include(t => t.Album).OrderBy(t => t.Name);
+                .Include(t => t.Genre).Include(t => t.Album);
 
-            if (search == null) return tracks.ToList();
-
-            return tracks.Where(t =>
+            if (search == null) return tracks.OrderByDescending(t => t.TrackId).ToList();
+            
+            return tracks.OrderBy(t => t.Name).Where(t =>
                 t.Name.ToLower().StartsWith(search.ToLower()) ||
                 t.Composer != null && t.Composer.ToLower().StartsWith(search.ToLower()) ||
                 t.Genre.Name != null && t.Genre.Name.ToLower().StartsWith(search.ToLower()) ||
