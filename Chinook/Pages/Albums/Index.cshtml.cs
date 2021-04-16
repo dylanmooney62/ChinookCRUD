@@ -29,4 +29,3 @@ namespace Chinook.Pages.Albums
         }
     }
 }
-

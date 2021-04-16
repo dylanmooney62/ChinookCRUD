@@ -6,7 +6,7 @@ namespace Entities
     {
         public Album()
         {
-            Tracks = new HashSet<Track>();
+            Tracks = new List<Track>();
         }
 
         public int AlbumId { get; set; }

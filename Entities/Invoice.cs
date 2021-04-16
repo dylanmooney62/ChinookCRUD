@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Entities
 {
-    public class Invoice
+    public class Invoice 
     {
         public Invoice()
         {

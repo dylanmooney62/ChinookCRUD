@@ -1,9 +1,10 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 
 namespace Entities
 {
-    public class Track
+    public class Track 
     {
         public Track()
         {
@@ -16,7 +17,7 @@ namespace Entities
         public int? AlbumId { get; set; }
         public int MediaTypeId { get; set; }
         public int? GenreId { get; set; }
-        public string Composer { get; set; }
+        public string? Composer { get; set; }
         public long Milliseconds { get; set; }
         public long? Bytes { get; set; }
         public decimal UnitPrice { get; set; }

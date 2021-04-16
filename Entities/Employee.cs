@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Entities
 {
-    public class Employees
+    public class Employees 
     {
         public Employees()
         {

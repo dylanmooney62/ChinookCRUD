@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Entities
 {
-    public class MediaType
+    public class MediaType 
     {
         public MediaType()
         {

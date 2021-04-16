@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Entities
 {
-    public class Playlist
+    public class Playlist 
     {
         public Playlist()
         {

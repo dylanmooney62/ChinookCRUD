@@ -458,6 +458,7 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\tabler\plugins\prismjs\js\prism.pack.js" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\tabler\plugins\prismjs\plugin.css" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\tabler\plugins\prismjs\plugin.js" />
+      <_ContentIncludedByDefault Remove="Pages\Shared\Components\Pagination\Default.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
