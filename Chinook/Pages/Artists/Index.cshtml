@@ -47,7 +47,7 @@
                                                 <a class="dropdown-item" asp-page="./Edit" asp-route-id="@artist.ArtistId">
                                                     Edit
                                                 </a>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item" role="button" href="#" data-bs-toggle="modal" data-bs-target="#modal-danger" data-entity="Artist" data-name="@artist.Name" data-id="@artist.ArtistId">
                                                     Delete
                                                 </a>
                                             </div>
@@ -101,3 +101,5 @@
         
     </div>
 </div>
+
+<partial name="Shared/_DeleteModal" />

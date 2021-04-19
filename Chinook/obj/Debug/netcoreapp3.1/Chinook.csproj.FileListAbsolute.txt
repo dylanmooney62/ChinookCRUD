@@ -402,3 +402,7 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/Index.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/New.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/Edit.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_DeleteModal.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Albums/Delete.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/Delete.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Tracks/Delete.cshtml.g.cs
