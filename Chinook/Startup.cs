@@ -42,6 +42,8 @@ namespace Chinook
 
             services.AddScoped<ITrackData, SqlTrackData>();
 
+            services.AddScoped<IArtistData, SqlArtistData>();
+
             services.AddRouting(options =>
             {
                 options.LowercaseUrls = true;

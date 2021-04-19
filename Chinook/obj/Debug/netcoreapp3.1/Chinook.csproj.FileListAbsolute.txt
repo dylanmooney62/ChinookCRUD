@@ -387,7 +387,6 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/Components/DeleteModal/Default.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Lib.dll
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Lib.pdb
-/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_TrackTable.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_BackBar.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/X.PagedList.dll
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.JsonPatch.dll
@@ -400,3 +399,4 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/_NewHeader.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Tracks/New.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Tracks/Edit.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/Index.cshtml.g.cs

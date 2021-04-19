@@ -1,0 +1,103 @@
+@page
+@using Entities
+@using X.PagedList.Mvc.Core.Common
+@using X.PagedList.Web.Common
+@model Chinook.Pages.Artists.Index
+
+@{
+    ViewData["Title"] = "Artists";
+    ViewData["Entity"] = "Artist";
+}
+
+
+<partial name="Shared/_Alert" for="Message"/>
+
+<partial name="Shared/_NewHeader"/>
+
+<div class="container-xl">
+
+    <div class="page-body">
+
+        <partial name="Shared/_SearchBar" for="Search"/>
+
+
+        @if (Model.Artists.Any())
+        {
+            <div class="col-12">
+                <div class="card">
+                    <div class="table-responsive-md">
+                        <table class="table card-table table-vcenter text-nowrap datatable">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (Artist artist in Model.Artists)
+                            {
+                                <tr>
+                                    <td>
+                                        @artist.Name
+                                    </td>
+                                    <td class="text-end">
+                                        <span class="dropdown">
+                                            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown" aria-expanded="false">Actions</button>
+                                            <div class="dropdown-menu dropdown-menu-end" style="">
+                                                <a class="dropdown-item" asp-page="./Edit" asp-route-id="@artist.ArtistId">
+                                                    Edit
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                        <div class="card-footer d-flex align-items-center">
+                            @Html.PagedListPager((IPagedList) Model.Artists, page => Url.Page("./Index", new {p = page, Model.Search}),
+                                new PagedListRenderOptions
+                                {
+                                    ContainerDivClasses = new[] {"ms-auto"},
+                                    UlElementClasses = new[] {"pagination m-0 ms-auto"},
+                                    LiElementClasses = new[] {"page-item"},
+                                    DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+                                    DisplayLinkToLastPage = PagedListDisplayMode.Never,
+                                    DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                                    DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                                    MaximumPageNumbersToDisplay = 5,
+                                    LinkToPreviousPageFormat = @"<svg xmlns=""http://www.w3.org/2000/svg"" class=""icon icon-tabler icon-tabler-chevron-left"" width=""24"" height=""24"" viewBox=""0 0 24 24"" stroke-width=""2"" stroke=""currentColor"" fill=""none"" stroke-linecap=""round"" stroke-linejoin=""round""><path stroke=""none"" d=""M0 0h24v24H0z"" fill=""none""></path><polyline points=""15 6 9 12 15 18""></polyline></svg>prev",
+                                    LinkToNextPageFormat = "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"icon icon-tabler icon-tabler-chevron-right\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n   <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n   <polyline points=\"9 6 15 12 9 18\"></polyline>\n</svg>"
+                                })
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="empty mt-4">
+                <div class="empty-img undraw-svg">
+                    <img src="~/img/music.svg" style="width: 20rem" alt="Bird chirping with musical notes">
+                </div>
+                <p class="empty-title">No Artists found</p>
+                <p class="empty-subtitle text-muted">
+                    Add a new artist by clicking the button below
+                </p>
+                <div class="empty-action">
+                    <a asp-page="./New" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        New Artist
+                    </a>
+                </div>
+            </div>
+        }
+        
+    </div>
+</div>
