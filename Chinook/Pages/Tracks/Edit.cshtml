@@ -1,0 +1,75 @@
+@page "/tracks/{id:int}/edit"
+@model Chinook.Pages.Tracks.Edit
+@{
+    ViewData["Entity"] = "Track";
+}
+
+<div class="page-header">
+    <div class="container-xl">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <form method="post">
+                        <div class="card-body">
+                            <h3 class="card-title">Edit Track</h3>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Track.Name">Name*</label>
+                                <input class="form-control" asp-for="Track.Name" asp-validation-for="Track.Name"/>
+                                <span class="invalid-feedback" asp-validation-for="Track.Name"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Track.AlbumId">Album*</label>
+                                <select class="form-select js-select"
+                                        asp-for="Track.AlbumId"
+                                        asp-items="@(new SelectList(Model.Albums, "AlbumId", "Title"))"
+                                        asp-validation-for="Track.AlbumId">
+                                    <option value="">Please select one</option>
+                                </select>
+                                <span class="invalid-feedback" asp-validation-for="Track.AlbumId"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Track.Composer">Composer</label>
+                                <input class="form-control" asp-for="Track.Composer" asp-validation-for="Track.Composer"/>
+                                <span class="invalid-feedback" asp-validation-for="Track.Composer"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Track.GenreId">Genre*</label>
+                                <select class="form-select js-select"
+                                        asp-for="Track.GenreId"
+                                        asp-items="@(new SelectList(Model.Genres, "GenreId", "Name"))"
+                                        asp-validation-for="Track.GenreId">
+                                    <option value="">Please select one</option>
+                                </select>
+                                <span class="invalid-feedback" asp-validation-for="Track.GenreId"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Track.MediaTypeId">Media Type*</label>
+                                <select class="form-select js-select"
+                                        asp-for="Track.MediaTypeId"
+                                        asp-items="@(new SelectList(Model.MediaTypes, "MediaTypeId", "Name"))"
+                                        asp-validation-for="Track.MediaTypeId">
+                                    <option value="">Please select one</option>
+                                </select>
+                                <span class="invalid-feedback" asp-validation-for="Track.MediaTypeId"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="Track.UnitPrice">Price*</label>
+                                <input class="form-control"
+                                       asp-for="Track.UnitPrice" asp-validation-for="Track.UnitPrice" type="number"/>
+                                <span class="invalid-feedback" asp-validation-for="Track.UnitPrice"></span>
+                            </div>
+                        </div>
+                        <input type="hidden" asp-for="Track.TrackId"/>
+                        <!-- Card footer -->
+                        <div class="card-footer">
+                            <div class="d-flex">
+                                <a href="javascript:history.go(-1);" class="btn btn-link">Cancel</a>
+                                <button type="submit" class="btn btn-primary ms-auto">Save Track</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
