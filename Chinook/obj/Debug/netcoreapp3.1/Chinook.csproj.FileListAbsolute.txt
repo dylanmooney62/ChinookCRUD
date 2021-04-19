@@ -400,3 +400,5 @@
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Tracks/New.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Tracks/Edit.cshtml.g.cs
 /Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/Index.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/New.cshtml.g.cs
+/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Chinook/obj/Debug/netcoreapp3.1/Razor/Pages/Artists/Edit.cshtml.g.cs

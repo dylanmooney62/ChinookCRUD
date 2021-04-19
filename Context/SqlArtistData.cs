@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Context
 {
@@ -25,32 +27,45 @@ namespace Context
 
         public Artist GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return _db.Artists.SingleOrDefault(a => a.ArtistId == id);
         }
 
-        public Artist Update(Track updatedTrack)
+        public Artist Update(Artist updatedArtist)
         {
-            throw new System.NotImplementedException();
+            EntityEntry<Artist> entity = _db.Artists.Attach(updatedArtist);
+
+            entity.State = EntityState.Modified;
+
+            return updatedArtist;
         }
 
-        public Artist Add(Track newTrack)
+        public Artist Add(Artist newArtist)
         {
-            throw new System.NotImplementedException();
+            _db.Add(newArtist);
+
+            return newArtist;
         }
 
         public Artist Delete(int id)
         {
-            throw new System.NotImplementedException();
+            Artist artist = GetById(id);
+
+            if (artist != null)
+            {
+                _db.Artists.Remove(artist);
+            }
+
+            return artist;
         }
 
         public int Count()
         {
-            throw new System.NotImplementedException();
+            return _db.Artists.Count();
         }
 
         public int Commit()
         {
-            throw new System.NotImplementedException();
+            return _db.SaveChanges();
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Chinook.Pages.Tracks
 
             if (Track == null)
             {
-                return RedirectToPage("./NotFound");
+                return RedirectToPage("/NotFound");
             }
             
             Albums = _db.Albums;

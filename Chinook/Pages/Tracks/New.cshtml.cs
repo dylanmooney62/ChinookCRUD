@@ -57,7 +57,7 @@ namespace Chinook.Pages.Tracks
 
             _trackData.Commit();
 
-            TempData["Message"] = "Track Added";
+            TempData["Message"] = $"Track: \"{Track.Name}\" Added";
 
             return albumId > 0 ? RedirectToPage("/Albums/Detail", new {id = albumId}) : RedirectToPage("./Index");
         }

@@ -27,7 +27,6 @@ namespace Chinook.Pages.Artists
         {
             Artists = _artistData.Search(Search);
             
-              
             int page = p ?? 1;
 
             Artists = Artists.ToPagedList(page, 12);
