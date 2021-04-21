@@ -49,11 +49,38 @@ namespace Context
         public Artist Delete(int id)
         {
             Artist artist = GetById(id);
-
-            if (artist != null)
+            
+            if (artist == null) return null;
+            
+            IQueryable<Album> albums = _db.Albums.Where(a => a.ArtistId == artist.ArtistId);
+            
+            if (!albums.Any())
             {
                 _db.Artists.Remove(artist);
+
+                return artist;
             }
+            
+            // Set all tracks in album to null
+            foreach (Album album in albums)
+            {
+                IQueryable<Track> tracks = _db.Tracks.Where(t => t.AlbumId == album.AlbumId);
+
+                if (!tracks.Any()) continue;
+                
+                foreach (Track track in tracks)
+                {
+                    track.AlbumId = null;
+                }
+            }
+            
+            // Delete album from db
+            _db.Albums.RemoveRange(albums);
+            
+            // Delete artist from db
+            _db.Artists.Remove(artist);
+
+            _db.SaveChanges();
 
             return artist;
         }

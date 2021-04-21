@@ -15,9 +15,8 @@ namespace Entities
 
         public int TrackId { get; set; }
         public string Name { get; set; }
-
-        [Required(ErrorMessage = "Album is required")]
-        public int AlbumId { get; set; }
+        
+        public int? AlbumId { get; set; }
 
         [Required(ErrorMessage = "Media Type is required")]
         public int MediaTypeId { get; set; }

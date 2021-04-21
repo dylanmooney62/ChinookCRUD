@@ -62,7 +62,7 @@ namespace Context
                 t.Name.ToLower().StartsWith(search.ToLower()) ||
                 t.Composer != null && t.Composer.ToLower().StartsWith(search.ToLower()) ||
                 t.Genre.Name != null && t.Genre.Name.ToLower().StartsWith(search.ToLower()) ||
-                t.Album.Title != null && t.Album.Title.ToLower().StartsWith(search.ToLower())
+                t.Album.Title.ToLower().StartsWith(search.ToLower())
             ).ToList();
         }
 

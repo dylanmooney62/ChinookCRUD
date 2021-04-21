@@ -171,12 +171,12 @@ namespace Context
                 entity.HasOne(d => d.Invoice)
                     .WithMany(p => p.InvoiceItems)
                     .HasForeignKey(d => d.InvoiceId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.ClientSetNull);
 
                 entity.HasOne(d => d.Track)
                     .WithMany(p => p.InvoiceItems)
                     .HasForeignKey(d => d.TrackId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<Invoice>(entity =>
@@ -209,7 +209,7 @@ namespace Context
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Invoices)
                     .HasForeignKey(d => d.CustomerId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<MediaType>(entity =>
@@ -233,12 +233,12 @@ namespace Context
                 entity.HasOne(d => d.Playlist)
                     .WithMany(p => p.PlaylistTrack)
                     .HasForeignKey(d => d.PlaylistId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.ClientSetNull);
 
                 entity.HasOne(d => d.Track)
                     .WithMany(p => p.PlaylistTrack)
                     .HasForeignKey(d => d.TrackId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<Playlist>(entity =>
@@ -286,7 +286,7 @@ namespace Context
                 entity.HasOne(d => d.MediaType)
                     .WithMany(p => p.Tracks)
                     .HasForeignKey(d => d.MediaTypeId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             OnModelCreatingPartial(modelBuilder);

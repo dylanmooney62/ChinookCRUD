@@ -62,7 +62,10 @@
                                 <tr>
                                     <td>@track.Name</td>
                                     <td>
-                                        <a asp-page="/Albums/Detail" asp-route-id="@track.AlbumId" class="text-reset" tabindex="-1">@track.Album.Title</a>
+                                        @if (track.AlbumId != null)
+                                        {
+                                            <a asp-page="/Albums/Detail" asp-route-id="@track.AlbumId" class="text-reset" tabindex="-1">@track.Album.Title</a>
+                                        }
                                     </td>
                                     <td>@track.Genre.Name</td>
                                     <td>@track.Composer</td>

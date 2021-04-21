@@ -1,10 +1,18 @@
+
+const errorMessages = {
+    Artist: "Removing an artist will also delete all albums from this artist.",
+    Track: "",
+    Album: ""
+}
+
+
 const populateModal = (entity, name, id) => {
 
     const modal = document.getElementById("modal-danger");
 
     modal.querySelector("h3").textContent = `Delete ${entity}`;
 
-    modal.querySelector(".text-muted").textContent = `Are you sure you want to delete? "${name}". This action cannot be undone.`;
+    modal.querySelector(".text-muted").textContent = `Are you sure you want to delete "${name}"?. ${errorMessages[entity]} This action cannot be undone.`;
 
     const form = modal.querySelector("form");
 
