@@ -21,7 +21,7 @@
                                 <span class="invalid-feedback" asp-validation-for="Track.Name"></span>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" asp-for="Track.AlbumId">Album*</label>
+                                <label class="form-label" asp-for="Track.AlbumId">Album</label>
                                 <select class="form-select js-select"
                                         asp-for="Track.AlbumId"
                                         asp-items="@(new SelectList(Model.Albums, "AlbumId", "Title", Model.AlbumId))"

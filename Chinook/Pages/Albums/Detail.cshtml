@@ -93,7 +93,14 @@
                                                 <a class="dropdown-item" asp-page="/Tracks/Edit" asp-route-id="@track.TrackId">
                                                     Edit
                                                 </a>
-                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal-danger" data-entity="Track" data-name="@track.Name" data-id="@track.TrackId">
+                                                <a class="dropdown-item" 
+                                                   href="#" 
+                                                   data-bs-toggle="modal" 
+                                                   data-bs-target="#modal-danger" 
+                                                   data-entity="Track" 
+                                                   data-name="@track.Name" 
+                                                   data-id="@track.TrackId" 
+                                                   data-qs="?albumId=@Model.Album.AlbumId">
                                                     Delete
                                                 </a>
                                             </div>
@@ -122,4 +129,4 @@
 </div>
 
 
-<partial name="Shared/_DeleteModal" />
+<partial name="Shared/_DeleteModal"/>

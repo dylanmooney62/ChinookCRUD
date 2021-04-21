@@ -10,8 +10,7 @@ namespace Chinook.Pages.Artists
     public class Delete : PageModel
     {
         private readonly IArtistData _artistData;
-        
-    
+
 
         public Delete(IArtistData artistData)
         {
@@ -22,14 +21,16 @@ namespace Chinook.Pages.Artists
         public IActionResult OnPost(int id)
         {
             Artist artist = _artistData.Delete(id);
-            
+
 
             if (artist == null)
             {
                 return RedirectToPage("/NotFound");
             }
 
-            TempData["Message"] = $"{artist.Name} has been deleted";
+            _artistData.Commit();
+
+            TempData["Message"] = $"Artist: \"{artist.Name}\" has been deleted";
 
             return RedirectToPage("./Index");
         }

@@ -79,9 +79,7 @@ namespace Context
             
             // Delete artist from db
             _db.Artists.Remove(artist);
-
-            _db.SaveChanges();
-
+            
             return artist;
         }
 

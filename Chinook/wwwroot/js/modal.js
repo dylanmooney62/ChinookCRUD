@@ -1,12 +1,10 @@
-
 const errorMessages = {
     Artist: "Removing an artist will also delete all albums from this artist.",
     Track: "",
     Album: ""
 }
 
-
-const populateModal = (entity, name, id) => {
+const populateModal = (entity, name, id, qs = null) => {
 
     const modal = document.getElementById("modal-danger");
 
@@ -16,7 +14,7 @@ const populateModal = (entity, name, id) => {
 
     const form = modal.querySelector("form");
 
-    form.action = `/${entity}s/${id}/delete`.toLowerCase();
+    form.action = `/${entity}s/${id}/delete${qs ? qs : ''}`.toLowerCase();
 }
 
 document.querySelectorAll("[data-bs-toggle]")
@@ -24,7 +22,8 @@ document.querySelectorAll("[data-bs-toggle]")
         const entity = el.getAttribute("data-entity");
         const id = el.getAttribute("data-id");
         const name = el.getAttribute("data-name");
+        const qs = el.getAttribute("data-qs");
 
-        populateModal(entity, name, id);
+        populateModal(entity, name, id, qs);
     }))
  

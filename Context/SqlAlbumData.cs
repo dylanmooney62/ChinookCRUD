@@ -31,10 +31,19 @@ namespace Context
         {
             Album album = GetById(id);
 
-            if (album != null)
+            if (album == null) return null;
+
+            IQueryable<Track> tracks = _db.Tracks.Where(t => t.AlbumId == album.AlbumId);
+
+            if (tracks.Any())
             {
-                _db.Albums.Remove(album);
+                foreach (Track track in tracks)
+                {
+                    track.AlbumId = null;
+                }
             }
+
+            _db.Albums.Remove(album);
 
             return album;
         }
