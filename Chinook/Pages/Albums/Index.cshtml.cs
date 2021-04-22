@@ -10,9 +10,9 @@ namespace Chinook.Pages.Albums
     public class Index : PageModel
     {
         private readonly IAlbumData _albumData;
-        public IEnumerable<Album> Albums { get; private set; }
         [BindProperty(SupportsGet = true)] public string Search { get; set; }
         [TempData] public string Message { get; set; }
+        public IEnumerable<Album> Albums { get; private set; }
 
         public Index(IAlbumData albumData)
         {

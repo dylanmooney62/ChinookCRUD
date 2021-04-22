@@ -11,45 +11,34 @@ namespace Chinook.Pages.Tracks
     public class New : PageModel
     {
         private readonly ITrackData _trackData;
-        private readonly IAlbumData _albumData;
         private readonly ChinookContext _db;
 
         [BindProperty] public Track Track { get; set; }
-
+        [BindProperty(SupportsGet = true)] public int AlbumId { get; set; }
         public IEnumerable<Album> Albums { get; set; }
         public IEnumerable<Genre> Genres { get; set; }
         public IEnumerable<MediaType> MediaTypes { get; set; }
 
-        [BindProperty] public int AlbumId { get; set; }
 
-
-        public New(ITrackData trackData, IAlbumData albumData, ChinookContext db)
+        public New(ITrackData trackData, ChinookContext db)
         {
             _trackData = trackData;
-            _albumData = albumData;
             _db = db;
         }
 
-        public void OnGet(int? albumId)
+        public void OnGet()
         {
-            if (albumId != null) AlbumId = (int) albumId;
-
-            Albums = _albumData.Search(null);
-            Genres = _db.Genres;
-            MediaTypes = _db.MediaTypes;
+            PopulateSelects();
         }
 
-        public IActionResult OnPost(int? albumId)
+        public IActionResult OnPost()
         {
-            // this is temp as you wouldn't really expect a user to specify the time for a track they're uploading
+            // this is random as you wouldn't expect a user to specify the time for a track they're uploading
             Track.Milliseconds = new Random().Next(0, 200000);
 
             if (!ModelState.IsValid)
             {
-                Albums = _albumData.Search(null);
-                Genres = _db.Genres;
-                MediaTypes = _db.MediaTypes;
-
+                PopulateSelects();
                 return Page();
             }
 
@@ -57,9 +46,16 @@ namespace Chinook.Pages.Tracks
 
             _trackData.Commit();
 
-            TempData["Message"] = $"Track: \"{Track.Name}\" Added";
+            TempData["Message"] = $"Track: \"{Track.Name}\" has been created";
 
-            return albumId > 0 ? RedirectToPage("/Albums/Detail", new {id = albumId}) : RedirectToPage("./Index");
+            return AlbumId > 0 ? RedirectToPage("/Albums/Detail", new {id = AlbumId}) : RedirectToPage("./Index");
+        }
+
+        private void PopulateSelects()
+        {
+            Albums = _db.Albums;
+            Genres = _db.Genres;
+            MediaTypes = _db.MediaTypes;
         }
     }
 }

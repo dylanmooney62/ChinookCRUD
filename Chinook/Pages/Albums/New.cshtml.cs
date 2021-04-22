@@ -34,8 +34,8 @@ namespace Chinook.Pages.Albums
 
             _albumData.Commit();
             
-            TempData["Message"] = "Album created";
-
+            TempData["Message"] = $"Album: \"{Album.Title}\" has been created";
+            
             return RedirectToPage("./Detail", new {id = Album.AlbumId});
         }
     }

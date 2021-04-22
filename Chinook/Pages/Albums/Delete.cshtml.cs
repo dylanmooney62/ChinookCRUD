@@ -15,14 +15,10 @@ namespace Chinook.Pages.Albums
         }
         public IActionResult OnPost(int id)
         {
-
             Album album = _albumData.Delete(id);
 
-            if (album == null)
-            {
-                return RedirectToPage("/NotFound");
-            }
-
+            if (album == null) return RedirectToPage("/NotFound");
+            
             _albumData.Commit();
             
             TempData["Message"] = $"Album: \"{album.Title}\" has been deleted";

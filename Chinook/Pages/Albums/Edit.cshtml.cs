@@ -13,7 +13,6 @@ namespace Chinook.Pages.Albums
         private readonly IAlbumData _albumData;
 
         [BindProperty] public Album Album { get; set; }
-
         public IEnumerable<Artist> Artists { get; set; }
 
         public Edit(IAlbumData albumData, ChinookContext db)
@@ -28,10 +27,7 @@ namespace Chinook.Pages.Albums
 
             Artists = _db.Artists.OrderBy(a => a.Name);
 
-            if (Album == null)
-            {
-                return RedirectToPage("./NotFound");
-            }
+            if (Album == null) return RedirectToPage("./NotFound");
 
             return Page();
         }
@@ -44,7 +40,7 @@ namespace Chinook.Pages.Albums
 
             _albumData.Commit();
 
-            TempData["Message"] = "Album has been updated";
+            TempData["Message"] = $"Album: \"{Album.Title}\" has been updated";
 
             return RedirectToPage("./Detail", new {id = Album.AlbumId});
         }

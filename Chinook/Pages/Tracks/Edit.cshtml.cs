@@ -8,16 +8,14 @@ namespace Chinook.Pages.Tracks
 {
     public class Edit : PageModel
     {
-
-        private readonly ChinookContext _db;
         private readonly ITrackData _trackData;
+        private readonly ChinookContext _db;
+        [BindProperty] public Track Track { get; set; }
         public IEnumerable<Album> Albums { get; set; }
         public IEnumerable<Genre> Genres { get; set; }
         public IEnumerable<MediaType> MediaTypes { get; set; }
-        
-        [BindProperty] public Track Track { get; set; }
-        
-        public Edit(ChinookContext db,ITrackData trackData)
+
+        public Edit(ITrackData trackData, ChinookContext db)
         {
             _trackData = trackData;
             _db = db;
@@ -25,17 +23,11 @@ namespace Chinook.Pages.Tracks
 
         public IActionResult OnGet(int id)
         {
-
             Track = _trackData.GetById(id);
 
-            if (Track == null)
-            {
-                return RedirectToPage("/NotFound");
-            }
-            
-            Albums = _db.Albums;
-            Genres = _db.Genres;
-            MediaTypes = _db.MediaTypes;
+            if (Track == null) return RedirectToPage("/NotFound");
+
+            PopulateSelects();
 
             return Page();
         }
@@ -44,9 +36,7 @@ namespace Chinook.Pages.Tracks
         {
             if (!ModelState.IsValid)
             {
-                Albums = _db.Albums;
-                Genres = _db.Genres;
-                MediaTypes = _db.MediaTypes;
+                PopulateSelects();
                 return Page();
             }
 
@@ -56,7 +46,16 @@ namespace Chinook.Pages.Tracks
 
             TempData["Message"] = $"Track: \"{Track.Name}\" has been updated";
 
-            return RedirectToPage("/Albums/Detail", new {id = Track.AlbumId});
+            return Track.AlbumId != null
+                ? RedirectToPage("/Albums/Detail", new {id = Track.AlbumId})
+                : RedirectToPage("./Index");
+        }
+
+        private void PopulateSelects()
+        {
+            Albums = _db.Albums;
+            Genres = _db.Genres;
+            MediaTypes = _db.MediaTypes;
         }
     }
 }

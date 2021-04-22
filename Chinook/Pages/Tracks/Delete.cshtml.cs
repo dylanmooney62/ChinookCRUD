@@ -18,15 +18,12 @@ namespace Chinook.Pages.Tracks
         {
             Track track = _trackData.Delete(id);
 
-            if (track == null)
-            {
-                return RedirectToPage("/NotFound");
-            }
+            if (track == null) return RedirectToPage("/NotFound");
 
             _trackData.Commit();
 
-            TempData["Message"] = $"Track \"{track.Name}\" has been deleted";
-            
+            TempData["Message"] = $"Track: \"{track.Name}\" has been deleted";
+
             return albumId > 0 ? RedirectToPage("/Albums/Detail", new {id = albumId}) : RedirectToPage("./Index");
         }
     }

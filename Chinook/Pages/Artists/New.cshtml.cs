@@ -8,7 +8,6 @@ namespace Chinook.Pages.Artists
     public class New : PageModel
     {
         private readonly IArtistData _artistData;
-
         [BindProperty] public Artist Artist { get; set; }
 
         public New(IArtistData artistData)
@@ -27,8 +26,8 @@ namespace Chinook.Pages.Artists
             _artistData.Add(Artist);
 
             _artistData.Commit();
-
-            TempData["Message"] = $"Artist \"{Artist.Name}\" created";
+            
+            TempData["Message"] = $"Artist: \"{Artist.Name}\" has been created";
             
             return RedirectToPage("./Index");
         }
