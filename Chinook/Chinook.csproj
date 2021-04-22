@@ -459,11 +459,13 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\tabler\plugins\prismjs\plugin.css" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\tabler\plugins\prismjs\plugin.js" />
       <_ContentIncludedByDefault Remove="Pages\Shared\Components\Pagination\Default.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Shared\Components\DeleteModal\Default.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Context\Context.csproj" />
       <ProjectReference Include="..\Lib\Lib.csproj" />
+      <ProjectReference Include="..\Models\Models.csproj" />
     </ItemGroup>
 
 </Project>

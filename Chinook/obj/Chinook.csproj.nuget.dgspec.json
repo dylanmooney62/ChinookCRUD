@@ -31,6 +31,9 @@
               },
               "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/Lib.csproj": {
                 "projectPath": "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/Lib.csproj"
+              },
+              "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/Models.csproj": {
+                "projectPath": "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/Models.csproj"
               }
             }
           }
@@ -247,6 +250,70 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/Models.csproj",
+        "projectName": "Models",
+        "projectPath": "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/Models.csproj",
+        "packagesPath": "/Users/dylanmooney/.nuget/packages/",
+        "outputPath": "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dylanmooney/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

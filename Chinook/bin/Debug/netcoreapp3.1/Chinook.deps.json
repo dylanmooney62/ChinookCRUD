@@ -34,6 +34,7 @@
           "Context": "1.0.0",
           "Lib": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.0",
+          "Models": "1.0.0",
           "Westwind.AspNetCore.LiveReload": "0.3.1",
           "X.PagedList": "8.0.7",
           "X.PagedList.Mvc.Core": "8.0.7",
@@ -1819,11 +1820,25 @@
         }
       },
       "Lib/1.0.0": {
+        "dependencies": {
+          "X.PagedList.Mvc.Core": "8.0.7"
+        },
         "runtime": {
           "Lib.dll": {}
         },
         "compile": {
           "Lib.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "dependencies": {
+          "X.PagedList.Mvc.Core": "8.0.7"
+        },
+        "runtime": {
+          "Models.dll": {}
+        },
+        "compile": {
+          "Models.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery.Reference/3.1.0.0": {
@@ -4657,6 +4672,11 @@
       "sha512": ""
     },
     "Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

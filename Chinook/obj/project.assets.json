@@ -2436,11 +2436,27 @@
       "Lib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "X.PagedList.Mvc.Core": "8.0.7"
+        },
         "compile": {
           "bin/placeholder/Lib.dll": {}
         },
         "runtime": {
           "bin/placeholder/Lib.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "X.PagedList.Mvc.Core": "8.0.7"
+        },
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
         }
       }
     }
@@ -7444,6 +7460,11 @@
       "type": "project",
       "path": "../Lib/Lib.csproj",
       "msbuildProject": "../Lib/Lib.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7451,6 +7472,7 @@
       "Context >= 1.0.0",
       "Lib >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.0",
+      "Models >= 1.0.0",
       "Westwind.AspNetCore.LiveReload >= 0.3.1",
       "X.PagedList >= 8.0.7",
       "X.PagedList.Mvc.Core >= 8.0.7"
@@ -7486,6 +7508,9 @@
             },
             "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/Lib.csproj": {
               "projectPath": "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Lib/Lib.csproj"
+            },
+            "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/Models.csproj": {
+              "projectPath": "/Users/dylanmooney/Documents/university-practical/internet-scripting/Coursework/Chinook/Models/Models.csproj"
             }
           }
         }
