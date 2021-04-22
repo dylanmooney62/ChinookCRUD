@@ -6,7 +6,7 @@
     background-image: url("../img/honey.png");
 }
 
-    /* Places footer on bottom of page */
+/* Places footer on bottom of page */
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -17,11 +17,11 @@
     margin-top: auto;
 }
 
-
 /* Prevents table overflow with one result */
 .table-responsive {
     overflow-x: initial;
     -webkit-overflow-scrolling: touch;
+    margin-bottom: 0;
 }
 
 .table-responsive td {
@@ -140,7 +140,6 @@ span.select2-selection:focus {
 .undraw-svg img {
     height: unset;
 }
-
 
 /*Overwrite Pager classes*/
 

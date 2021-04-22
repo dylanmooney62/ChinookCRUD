@@ -2,10 +2,9 @@
     $('.js-select').select2();
 });
 
+// Adds classes to PagedList pagination so it resembles tabler styles
 
-// Add tabler styles to X paged list
-
-document.querySelectorAll(".page-item").forEach(function (el) { 
+document.querySelectorAll(".page-item").forEach( (el) => { 
     el.firstElementChild.classList.add("page-link");
     
     if(el.classList.contains("active")) {
