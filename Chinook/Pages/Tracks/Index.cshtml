@@ -44,7 +44,7 @@
                                             <a asp-page="/Albums/Detail" asp-route-id="@track.AlbumId" class="text-reset" tabindex="-1">@track.Album.Title</a>
                                         }
                                     </td>
-                                    <td>@track.Genre.Name</td>
+                                    <td>@track.Genre?.Name</td>
                                     <td>@track.Composer</td>
                                     <td>@TimeConvertor.MinutesAndSeconds(track.Milliseconds)</td>
                                     <td>£@track.UnitPrice</td>

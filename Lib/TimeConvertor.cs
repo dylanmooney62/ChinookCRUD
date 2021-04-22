@@ -8,7 +8,7 @@ namespace Lib
         {
             TimeSpan t = TimeSpan.FromMilliseconds(ms);
 
-            string humanFormat = string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
+            var humanFormat = $"{t.Minutes:D2}:{t.Seconds:D2}";
 
             return humanFormat;
         }

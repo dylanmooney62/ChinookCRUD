@@ -1,21 +1,14 @@
 ﻿#nullable enable
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Entities
 {
     public class Track
     {
-        public Track()
-        {
-            InvoiceItems = new HashSet<InvoiceItem>();
-            PlaylistTrack = new HashSet<PlaylistTrack>();
-        }
-
         public int TrackId { get; set; }
-        public string Name { get; set; }
         
+        [Required(ErrorMessage = "Name is required")]
+        public string? Name { get; set; }
         public int? AlbumId { get; set; }
 
         [Required(ErrorMessage = "Media Type is required")]
@@ -35,7 +28,5 @@ namespace Entities
         public virtual Album? Album { get; set; }
         public virtual Genre? Genre { get; set; }
         public virtual MediaType? MediaType { get; set; }
-        public virtual ICollection<InvoiceItem> InvoiceItems { get; set; }
-        public virtual ICollection<PlaylistTrack> PlaylistTrack { get; set; }
     }
 }
