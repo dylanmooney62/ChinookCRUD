@@ -39,7 +39,7 @@
                                         @album.Artist.Name
                                     </td>
                                     <td class="text-end">
-                                        <span class="dropdown">
+                                        <div class="dropdown">
                                             <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown" aria-expanded="false">Actions</button>
                                             <div class="dropdown-menu dropdown-menu-end" style="">
                                                 <a class="dropdown-item" asp-page="./Edit" asp-route-id="@album.AlbumId">
@@ -49,7 +49,7 @@
                                                     Delete
                                                 </a>
                                             </div>
-                                        </span>
+                                        </div>
                                     </td>
                                 </tr>
                             }

@@ -16,14 +16,15 @@
                             <h3 class="card-title">New Album</h3>
                             <div class="mb-3">
                                 <label class="form-label" asp-for="Album.Title">Title</label>
-                                <input class="form-control" asp-for="Album.Title" asp-validation-for="Album.Title"/>
+                                <input class="form-control" asp-for="Album.Title"/>
                                 <span class="invalid-feedback" asp-validation-for="Album.Title"></span>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" asp-for="Album.ArtistId">Artist</label>
                                 <select class="form-select js-select" asp-for="Album.ArtistId" asp-items="@(new SelectList(Model.Artists, "ArtistId", "Name"))">
-                                    <option>Please select one</option>
+                                    <option value="">Please select one</option>
                                 </select>
+                                <span class="invalid-feedback" asp-validation-for="Album.ArtistId"></span>
                             </div>
                         </div>
                         <!-- Card footer -->
