@@ -19,10 +19,12 @@
 
 /* Prevents table overflow with one result */
 .table-responsive {
-    overflow-x: initial;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 0;
+    overflow-y: unset;
 }
+
+
 
 .table-responsive td {
     max-width: 250px;
@@ -53,6 +55,8 @@
 
 
 /* Overwrites Select2 to resemble tabler*/
+
+.select2-container { max-width: 100%; min-width: 100%; }
 
 .select2-selection__rendered {
     display: block;

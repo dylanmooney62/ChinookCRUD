@@ -10,3 +10,14 @@ document.querySelectorAll(".page-item").forEach((el) => {
         el.firstElementChild.classList.add("active");
     }
 })
+
+
+
+// Fixes overflow on tables with one result
+const rows = document.querySelector("tbody")?.childElementCount;
+
+if(rows === 1) {
+    const table = document.querySelector(".table-responsive");
+    table.style.overflow = "unset";
+}
+

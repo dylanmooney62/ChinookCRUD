@@ -64,11 +64,11 @@ namespace Context
         public IEnumerable<Album> Search(string search)
         {
             IEnumerable<Album> albums = _db.Albums
-                .Include(a => a.Artist).OrderBy(a => a.Title);
+                .Include(a => a.Artist);
 
-            if (search == null) return albums.ToList();
+            if (search == null) return albums.OrderByDescending(a => a.AlbumId).ToList();
 
-            return albums.Where(a =>
+            return albums.OrderBy(a => a.Title).Where(a =>
                 a.Title.ToLower().StartsWith(search.ToLower()) ||
                 a.Artist.Name.ToLower().StartsWith(search.ToLower())).ToList();
         }

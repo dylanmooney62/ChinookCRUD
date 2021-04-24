@@ -53,10 +53,10 @@
                             }
                             </tbody>
                         </table>
-                        <div class="card-footer d-flex align-items-center">
-                            @Html.PagedListPager((IPagedList) Model.Artists, page => Url.Page("./Index", new {p = page, Model.Search}),
-                                new TablePagination())
-                        </div>
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        @Html.PagedListPager((IPagedList) Model.Artists, page => Url.Page("./Index", new {p = page, Model.Search}),
+                            new TablePagination())
                     </div>
                 </div>
             </div>
